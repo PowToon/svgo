@@ -114,6 +114,9 @@ var addPrefixToUrlAttr = function(attr) {
  * @author strarsis <strarsis@gmail.com>
  */
 exports.fn = function(node, opts, extra) {
+    if(!opts.prefix){
+        return node;
+    }
 
     // prefix, from file name or option
     var prefix = 'prefix';
